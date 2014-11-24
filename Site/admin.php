@@ -6,10 +6,9 @@
 
 	# Handling invalid pagevisits.
 
-	# Logic for admin.php
 
-
-
+	# Logic for shop.php
+	
 
 	require_once "inc/footer.php";
 ?>

@@ -1,22 +1,5 @@
 #Webshop Vlambeer
 
-###How to register a new user:
-```
-$user = new User();
+###Description:
 
-$items = [
-	"email" 				=> $_POST['registerEmail'],
-	"pass"  				=> $_POST['registerPass'],
-	"company"				=> $_POST['registerCompany'],
-	"first"					=> $_POST['registerFirst'],
-	"last"					=> $_POST['registerLast'],
-	"initials"			=> $_POST['registerInsertion'],
-	"zipcode"				=> $_POST['registerZipcode'],
-	"phone"					=> $_POST['registerPhone'],
-	"residence"			=> $_POST['registerResidence'],
-	"street"				=> $_POST['registerStreet'],
-	"number"				=> $_POST['registerStreetNr']
-];
-
-$user->registerUser($items);
-```
+We got commissioned to make a new webshop for Vlambeer, and [this](https://www.github.com/WebshopVlambeer/Site) is the working site.

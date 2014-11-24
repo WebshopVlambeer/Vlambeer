@@ -2,7 +2,6 @@
 	class Shoppingcart {
 		// Properties:
 		private $cart_id;
-		
 
 		// Methods:
 		public function __construct() {
@@ -21,13 +20,13 @@
 			// Edit the amount of products in the cart
 		}
 
+		public function saveCart() {
+			// Save the cart to the database
+		}
+
 		// Getters & setters:
 		public function getCart() {
 			// Return an array of products in the cart
-		}
-
-		public function setCart() {
-			// Save the cart to the database
 		}
 	}
 ?>

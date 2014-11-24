@@ -1,7 +1,7 @@
 <?php
 	class Shoppingcart {
 		// Properties:
-		$cart_id;
+		$cart_id = "";
 		
 
 		// Methods:

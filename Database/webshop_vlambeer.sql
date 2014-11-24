@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Machine: localhost
--- Gegenereerd op: 24 nov 2014 om 14:10
+-- Gegenereerd op: 24 nov 2014 om 14:30
 -- Serverversie: 5.6.20
 -- PHP-versie: 5.5.15
 
@@ -58,11 +58,11 @@ CREATE TABLE IF NOT EXISTS `tbl_customers` (
   `residence` text NOT NULL,
   `firstname` text NOT NULL,
   `lastname` text NOT NULL,
-  `zip-code` int(255) NOT NULL,
-  `telephone` int(255) NOT NULL,
-  `email` int(255) NOT NULL,
+  `zip-code` varchar(255) NOT NULL,
+  `telephone` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `house_number` int(255) NOT NULL,
+  `house_number` varchar(255) NOT NULL,
   `street` varchar(255) NOT NULL,
   `insertion` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;

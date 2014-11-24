@@ -2,4 +2,6 @@
 
 ###Description:
 
-We got commissioned to make a new webshop for Vlambeer, and [this](https://www.github.com/WebshopVlambeer/Site) is the working site.
+We got commissioned to make a new webshop for Vlambeer. You can find the working site [here](https://www.github.com/WebshopVlambeer/Vlambeer/Site).
+
+Documentation can be found in the Google Drive all the collaborators are invited to.

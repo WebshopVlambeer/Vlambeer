@@ -12,10 +12,16 @@
 <!DOCTYPE html>
 <html lang="EN">
 	<head>
-		<title>Vlambeer | <?= $title ?></title>
+		<title>Vlambeer / <?= $title ?></title>
+		<link rel="stylesheet" href="<?= ASSETS ?>/css/main.css">
+		
+		<!-- Meta tags: -->
+		<meta charset="UTF-8">
+		<meta name="application-name" content="Webshop Vlambeer">
+		<meta name="author" 					content="Vlambeer">
+		<meta name="description" 			content="The new webshop for Vlambeer, commissioned by Radius College">
+		<meta name="keywords" 				content="vlambeer, vlambeer shop, shop, webshop">
 	</head>
 
 	<body>
-		
-	</body>
-</html>
+		<div class="wrapper">

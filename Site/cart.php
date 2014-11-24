@@ -9,6 +9,6 @@
 
 	# Logic for shop.php
 	
-
+	require_once "views/cart.view.php";
 	require_once "inc/footer.php";
 ?>

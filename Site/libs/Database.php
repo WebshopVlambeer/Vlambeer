@@ -26,6 +26,26 @@
 			}
 		} // end "__construct".
 
+
+		# $query 	= required. $query is the SQL query you want to send off to the database.
+		# $bind   = optional. $bind is the associative array for binding parameters to the query.
+		
+		/*
+			EXAMPLE:
+			-- To send a query off to the database simply use this:
+			$result = $db->query("SELECT * FROM tbl_name");
+			
+			-- The variable $result will then hold the resultset returned by the database.
+
+			-- To send a query to the database with bound parameters use this:
+			$bind = [
+				"firstname" => $_POST['firstName'],
+				"lastname"  => $_POST['lastName']
+			];
+
+			$result = $db->query("SELECT * FROM tbl_name WHERE first_name = :first & last_name = :last", $bind);
+			-- The variable $result will then hold the resultset returned by the database.
+		*/
 		public function query($query, $bind = null) {
 			$this->stmt = $this->con->prepare($query);
 			
@@ -48,6 +68,6 @@
 			} else {
 				return true;
 			}
-		} // end "query".
+		} // end method "query".
 	} // end class.
 ?>

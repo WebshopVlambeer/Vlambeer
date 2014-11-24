@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Machine: localhost
--- Gegenereerd op: 24 nov 2014 om 14:30
+-- Gegenereerd op: 24 nov 2014 om 14:40
 -- Serverversie: 5.6.20
 -- PHP-versie: 5.5.15
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 CREATE TABLE IF NOT EXISTS `link_product_tempcart` (
   `product_id` int(11) NOT NULL,
   `tempcart_id` int(11) NOT NULL,
-  `customer_id` int(11) NOT NULL
+  `customer_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -39,11 +39,11 @@ CREATE TABLE IF NOT EXISTS `link_product_tempcart` (
 --
 
 CREATE TABLE IF NOT EXISTS `tbl_cart` (
-`trempcart_id` int(11) NOT NULL,
+`cart_id` int(11) NOT NULL,
   `customer_nr` int(255) NOT NULL,
-  `artikel` varchar(255) NOT NULL,
+  `product_id` varchar(255) NOT NULL,
   `price` decimal(10,0) NOT NULL,
-  `numbers` int(255) NOT NULL
+  `amount` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -58,7 +58,7 @@ CREATE TABLE IF NOT EXISTS `tbl_customers` (
   `residence` text NOT NULL,
   `firstname` text NOT NULL,
   `lastname` text NOT NULL,
-  `zip-code` varchar(255) NOT NULL,
+  `zip_code` varchar(255) NOT NULL,
   `telephone` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
@@ -77,7 +77,8 @@ CREATE TABLE IF NOT EXISTS `tbl_product` (
   `product_id` int(255) NOT NULL,
   `naam` text NOT NULL,
   `price` decimal(11,0) NOT NULL,
-  `description` text NOT NULL
+  `description` text NOT NULL,
+  `sale_percentage` int(3) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -88,10 +89,10 @@ CREATE TABLE IF NOT EXISTS `tbl_product` (
 
 CREATE TABLE IF NOT EXISTS `tbl_tempcart` (
 `tempcart_id` int(255) NOT NULL,
-  `klant_nr` int(255) NOT NULL,
-  `artikel` int(255) NOT NULL,
+  `customer_nr` int(255) NOT NULL,
+  `product_id` int(255) NOT NULL,
   `price` decimal(11,0) NOT NULL,
-  `numbers` int(255) NOT NULL
+  `amount` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -102,7 +103,7 @@ CREATE TABLE IF NOT EXISTS `tbl_tempcart` (
 
 CREATE TABLE IF NOT EXISTS `tbl_wishlist` (
 `list_id` int(11) NOT NULL,
-  `artikel` int(255) NOT NULL,
+  `product_id` int(255) NOT NULL,
   `price` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
@@ -114,7 +115,7 @@ CREATE TABLE IF NOT EXISTS `tbl_wishlist` (
 -- Indexen voor tabel `tbl_cart`
 --
 ALTER TABLE `tbl_cart`
- ADD PRIMARY KEY (`trempcart_id`);
+ ADD PRIMARY KEY (`cart_id`);
 
 --
 -- Indexen voor tabel `tbl_customers`
@@ -142,7 +143,7 @@ ALTER TABLE `tbl_wishlist`
 -- AUTO_INCREMENT voor een tabel `tbl_cart`
 --
 ALTER TABLE `tbl_cart`
-MODIFY `trempcart_id` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT voor een tabel `tbl_customers`
 --

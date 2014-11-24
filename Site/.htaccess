@@ -1,0 +1,5 @@
+RewriteEngine on
+
+
+
+# Rewriting all URLs to remove .php and add trailing slashes

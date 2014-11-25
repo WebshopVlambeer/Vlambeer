@@ -7,7 +7,7 @@
 	# Handling invalid pagevisits.
 
       $sql = "SELECT * FROM tbl_customers";
-        if (! $query = DB::query($sql)){
+        if (! $query = $db->($sql)){
             echo "Kan gegevens niet uit database halen";
         }
         if (DB::num_rows($query) > 0){

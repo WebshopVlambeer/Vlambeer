@@ -4,7 +4,8 @@
 
 	require_once "inc/header.php";
 
-	# Handling invalid pagevisits.
+	# Handling invalid pagevisits.         
+
 
 
 	# Logic for shop.php

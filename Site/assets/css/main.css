@@ -9,6 +9,10 @@
 	font-family:"Gotham", sans-serif;
 }
 
+body {
+	z-index:7;
+}
+
 a {
 	color:white;
 	text-decoration:none;
@@ -21,6 +25,7 @@ a:hover {
 .container {
 	width:1280px;
 	margin:0 auto;
+	z-index:8;
 }
 
 .left {
@@ -34,6 +39,7 @@ a:hover {
 .content {
 	background-color:#fce6ad;
 	min-height:800px;
+	z-index:9;
 }
 
 .header-top {

@@ -1,0 +1,14 @@
+@font-face {
+  font-family:"Gotham";
+  src: url('../fonts/Gotham-Book.otf') format("opentype");
+}
+
+* {
+	padding:0;
+	margin:0;
+	font-family:"Gotham", sans-serif;
+}
+
+.wrapper {
+
+}

@@ -32,7 +32,7 @@
 						<div class="header-top-company">
 							<img src="<?= ASSETS ?>/img/logo.png" alt="Vlambeer Logo" class="header-top-logo">
 							<h1 class="header-top-name">Vlambeer</h1>
-							<h2 class="header-top-desc">Bringing back arcade games since 1986.</h2>
+							<h2 class="header-top-desc">Bringing back arcade games since 1955.</h2>
 						</div>
 
 						<div class="header-top-cart">

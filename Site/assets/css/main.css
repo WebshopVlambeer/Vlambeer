@@ -9,6 +9,25 @@
 	font-family:"Gotham", sans-serif;
 }
 
-.wrapper {
+.container {
+	width:1280px;
+	margin:0 auto;
+}
 
+.header-top {
+	background-color:#fac846;
+	height:160px;
+}
+
+.header-bottom {
+	background-color:black;
+	height:30px;
+}
+
+.header-bottom ul {
+	list-style:none;
+}
+
+.header-bottom ul li {
+	display:inline-block;
 }

@@ -1,29 +1,27 @@
 <?php
+	session_start();
+	require_once "../app/config.php";
+	require_once "../app/functions.php";
+	require_once "../libs/Database.php";
+	require_once "../libs/User.php";
+	
+	if (isset($_POST['loginSubmit']) && filter_var($_POST['loginName'], FILTER_VALiDATE_EMAIL)&& !empty($_POST['loginPass']))  {
 
-if (!isset($_POST['loginUser']) )
-{
-	header ('location: login.php?1');
-
-}
-
-if ( empty($_POST['email']) || empty($_POST['password']))
-{
-	header ('location: login.php?2');
-}
-
-$stmt = $con->prepare("SELECT * FROM users WHERE username = :email  && password = :password");
-$stmt->bindParam(":email", trim($_POST['email']));
-$stmt->bindParam(":password",( $_POST['password']));
-$stmt->execute();
-
-if (!$user = $stmt->fetch(PDO::FETCH_OBJ) )
-{
-	header ('location: login.php');
-	die();
-}
-session_start();
-$_SESSION['name'] = $user->username;
-$_SESSION['role_id'] = $user->role_id;
-header ('location: index.php');
-die();
-?>
+		$bind = ['user' => $_POST['loginName']];
+		$query = $db->select("SELECT * FROM tbl_customers WHERE email = :user", $bind);
+		
+		if ($db->getRows() == 1) {		
+			if (password_verify($pass, $query[0]->password)) {
+				// and if active
+				session_destroy();
+				session_start();
+				$_SESSION['name'] = $user;
+				$_SESSION['role'] = $query[0]->userrole;
+				header("location:".ROOT);
+			}
+		}
+	
+	}
+//
+	unset($_SESSION['msg']);
+	unset($_SESSION['msglvl']);

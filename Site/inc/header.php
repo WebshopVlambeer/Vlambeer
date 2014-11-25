@@ -43,9 +43,18 @@
 
 				<div class="header-bottom">
 					<div class="container">
-						<ul class="left">
+						<ul class="left nav-list">
 							<li><a href="<?= ROOT ?>">Home</a></li>
-							<li><a href="<?= ROOT ?>/shop/">Shop</a></li>
+							<li>
+								<a>Games</a>
+								<ul class="nav-list-dropdown">
+									<?php
+										foreach ($toolQuery as $tool) {
+											echo "<li><a href=".ROOT."/tools/".$tool->name.">".$tool->displayname."</a></li>";
+										}
+									?>
+								</ul> <!-- /.dropdownMenu -->
+							</li>
 							<li><a href="<?= ROOT ?>/contact/">Contact</a></li>
 							<li>
 								<form action="<?= ROOT ?>/controllers/searchController.php">

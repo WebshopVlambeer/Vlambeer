@@ -44,20 +44,23 @@ a:hover {
 .header-bottom {
 	background-color:black;
 	height:30px;
+	overflow:hidden;
 }
 
-.header-bottom ul {
+.nav-list {
 	list-style:none;
+	height:30px;
 }
 
-.header-bottom ul li {
+.nav-list li {
 	display:inline-block;
 	height:30px;
 	margin:0 10px;
 	height:30px;
+	position:relative;
 }
 
-.header-bottom ul li a {
+.nav-list li a {
 	color:#fff;
 	/*Transitions*/
 		-webkit-transition: all ease-in-out;
@@ -69,12 +72,35 @@ a:hover {
 	line-height:30px;
 }
 
-.header-bottom ul li form input[type=text] {
-	height:30px;
+.nav-list li form input[type=text] {
+	height:30px !important;
 	width:240px;
+	-webkit-box-sizing : border-box;‌​
+  -moz-box-sizing : border-box;
+  box-sizing : border-box;
+  padding-top:3px;
+  padding-left:5px;
 	border:none;
+	padding:none;
+	outline:none;
 }
 
-.header-bottom ul li a:hover {
+.nav-list li a:hover {
 	color:#999;
+	cursor:pointer;
+}
+
+.nav-list-dropdown {
+	display:none;
+	position:absolute;
+}
+
+.nav-list:hover .nav-list-dropdown {
+	display:block;
+	height:200px;
+	width:200px;
+	background-color:#fff;
+	top:30px;
+	left:0;
+	z-index:10;
 }

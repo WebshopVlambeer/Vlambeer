@@ -8,7 +8,7 @@
 	if (isset($_POST['loginSubmit']) && filter_var($_POST['loginName'], FILTER_VALiDATE_EMAIL)&& !empty($_POST['loginPass']))  {
 
 		$bind = ['user' => $_POST['loginName']];
-		$query = $db->select("SELECT * FROM tbl_customers WHERE email = :user", $bind);
+		$query = $db->query("SELECT * FROM tbl_customers WHERE email = :user", $bind);
 		
 		if ($db->getRows() == 1) {		
 			if (password_verify($pass, $query[0]->password)) {

@@ -1,7 +1,7 @@
 <?php
 	class User {
 		// Properties:
-		private $user_id;
+		private $customer_id;
 
 		// Methods:
 		public function __construct() {

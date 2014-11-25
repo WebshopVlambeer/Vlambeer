@@ -9,9 +9,31 @@
 	font-family:"Gotham", sans-serif;
 }
 
+a {
+	color:white;
+	text-decoration:none;
+}
+
+a:hover {
+	color:#999;
+}
+
 .container {
 	width:1280px;
 	margin:0 auto;
+}
+
+.left {
+	float:left;
+}
+
+.right {
+	float:right;
+}
+
+.content {
+	background-color:#fce6ad;
+	min-height:800px;
 }
 
 .header-top {
@@ -30,4 +52,29 @@
 
 .header-bottom ul li {
 	display:inline-block;
+	height:30px;
+	margin:0 10px;
+	height:30px;
+}
+
+.header-bottom ul li a {
+	color:#fff;
+	/*Transitions*/
+		-webkit-transition: all ease-in-out;
+		-moz-transition: all ease-in-out;
+		-o-transition: all ease-in-out;
+		-ms-transition: all ease-in-out;
+		transition: all ease-in-out;
+		transition-duration:100ms;
+	line-height:30px;
+}
+
+.header-bottom ul li form input[type=text] {
+	height:30px;
+	width:240px;
+	border:none;
+}
+
+.header-bottom ul li a:hover {
+	color:#999;
 }

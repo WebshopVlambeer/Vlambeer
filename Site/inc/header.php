@@ -45,7 +45,7 @@
 					<div class="container">
 						<ul class="left">
 							<li><a href="<?= ROOT ?>">Home</a></li>
-							<li><a href="<?= ROOT ?>/shop">Shop</a></li>
+							<li><a href="<?= ROOT ?>/shop/">Shop</a></li>
 							<li><a href="<?= ROOT ?>/contact/">Contact</a></li>
 							<li>
 								<form action="<?= ROOT ?>/controllers/searchController.php">
@@ -67,3 +67,5 @@
 			</header>
 
 			<div class="content">
+				<div class="container">
+					<h1>Hello!</h1>

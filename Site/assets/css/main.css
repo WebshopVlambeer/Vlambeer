@@ -1,6 +1,11 @@
 @font-face {
   font-family:"Gotham";
-  src: url('../fonts/Gotham-Book.otf') format("opentype");
+  src:url("../fonts/Gotham-Book.otf") format("opentype");
+}
+
+@font-face {
+	font-family:"Gotham Bold";
+	src:url("../fonts/Gotham-Bold.otf") format("opentype");
 }
 
 * {
@@ -45,6 +50,33 @@ a:hover {
 .header-top {
 	background-color:#fac846;
 	height:160px;
+}
+
+.header-top-company {
+	float:left;
+	width:500px;
+	margin-top:10px;
+	position:relative;
+}
+
+.header-top-logo {
+	width:140px;
+	height:140px;
+	float:left;
+}
+
+.header-top-name {
+	font-family:"Gotham Bold";
+	float:left;
+	font-size:54px;
+	margin-top:30px;
+	letter-spacing:2px;
+}
+
+.header-top-desc {
+	font-size:16px;
+	float:left;
+	margin-left:5px;
 }
 
 .header-bottom {

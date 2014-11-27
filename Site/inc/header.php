@@ -48,11 +48,7 @@
 							<li>
 								<a>Games</a>
 								<ul class="nav-list-dropdown">
-									<?php
-										foreach ($toolQuery as $tool) {
-											echo "<li><a href=".ROOT."/tools/".$tool->name.">".$tool->displayname."</a></li>";
-										}
-									?>
+								  <!-- Dropdown menu items -->
 								</ul> <!-- /.dropdownMenu -->
 							</li>
 							<li><a href="<?= ROOT ?>/contact/">Contact</a></li>

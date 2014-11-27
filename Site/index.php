@@ -1,11 +1,13 @@
 <?php
 	session_start();
-	if($_SESSION['role_id'] == 2){
-	$title = "Home";
-	echo 'Welkom user'
-	}else{
-	header("location: controllers/loginController.php")
+	
+	if($_SESSION['role_id'] == 2) {
+		$title = "Home";
+		echo 'Welkom user'
+	} else {
+		header("location: controllers/loginController.php");
 	}
+
 	require_once "inc/header.php";
 
 	# Handling invalid pagevisits.

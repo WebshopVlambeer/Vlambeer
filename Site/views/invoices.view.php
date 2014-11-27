@@ -12,12 +12,15 @@
 
  <?php
 
-        foreach($custQuery as $invoic){
+        foreach($result as $invoic){
 
         echo "<tr>";
-            echo "<td>" . $invoic->companyname . "</td>";
-            echo "<td>" . $invoic->residence . "</td>";
-            echo "<td>" . $invoic->firstname . "</td>";
-            echo "<td>" . $invoic->lastname . "</td>";
-            echo "<td>" . $invoic->zip_code . "</td>";
-            echo '<td><a hr
+            echo "<td>" . $invoic->description . "</td>";
+            echo "<td>" . $invoic->invoicesDate . "</td>";
+            echo "<td>" . $invoic->endDate . "</td>";
+            echo "<td>" . $invoic->quantity . "</td>";
+            echo "<td>" . $invoic->price . "</td>";
+            echo "<td>" . $invoic->totalPrice . "</td>";
+            echo "<td>" . $invoic->btw . "</td>";
+        echo "</tr>";
+    }

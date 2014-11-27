@@ -10,6 +10,6 @@
 
 	$result = $db->query("SELECT * FROM tbl_invoices");
 	
-	require_once "views/home.invoices.php";
+	require_once "views/invoices.view.php";
 	require_once "inc/footer.php";
 ?>

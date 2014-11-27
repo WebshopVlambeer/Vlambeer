@@ -28,6 +28,11 @@
 	<body>
 		<div class="wrapper">
 			<header>
+				<?php 
+					if(getMsg()) {
+						echo getMsg();
+					} 
+				?>
 				<div class="header-top">
 					<div class="container">
 						<div class="header-top-company">

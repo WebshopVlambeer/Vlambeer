@@ -1,4 +1,4 @@
-				</div>
+				</div> <!-- /.container -->
 			</div> <!-- /.content -->	
 	
 		<!-- JavaScript -->

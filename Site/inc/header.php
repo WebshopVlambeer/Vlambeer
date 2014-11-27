@@ -14,6 +14,7 @@
 	<head>
 		<title>Vlambeer / <?= $title ?></title>
 		<link rel="stylesheet" href="<?= ASSETS ?>/css/main.css">
+		<link rel="stylesheet" href="<?= ASSETS ?>/css/temp-style.css">
 		<link rel="icon" type="image/x-icon" href="<?= ASSETS ?>/img/favicon.ico">
 		
 		<!-- Meta tags: -->
@@ -27,12 +28,19 @@
 	<body>
 		<div class="wrapper">
 			<header>
+				<div class="msg-container">
+					<?php
+						if (getMsg()) {
+						 	echo getMsg();
+						}
+					?>
+				</div>
 				<div class="header-top">
 					<div class="container">
 						<div class="header-top-company">
 							<img src="<?= ASSETS ?>/img/vlambeer-logo.png" alt="Vlambeer Logo" class="header-top-logo">
 							<h1 class="header-top-name">VLAMBEER</h1>
-							<h2 class="header-top-desc">Bringing back arcade games since 1955.</h2>
+							<h2 class="header-top-desc">Bringing back arcade games since 1955</h2>
 						</div>
 
 						<div class="header-top-cart">
@@ -49,9 +57,20 @@
 								<a>Games</a>
 								<ul class="nav-list-dropdown">
 								  <!-- Dropdown menu items -->
+								  <li><a href="#">Things</a></li>
+								  <li><a href="#">Other things</a></li>
+								  <li><a href="#">More stuff and things!</a></li>
 								</ul> <!-- /.dropdownMenu -->
 							</li>
 							<li><a href="<?= ROOT ?>/contact/">Contact</a></li>
+							<?php if (!isset($_SESSION['name'])) { ?>
+								<li><a href="<?= ROOT ?>/login/">Login</a></li>
+							<?php } else { ?>
+								<li><a href="<?= ROOT ?>/account/">Account</a></li>
+							<?php } ?>
+						</ul>
+
+						<ul class="right nav-list">
 							<li>
 								<form action="<?= ROOT ?>/controllers/searchController.php">
 									<input type="text" placeholder="Search..." name="query">
@@ -59,18 +78,9 @@
 								</form>
 							</li>
 						</ul>
-
-						<ul class="right">
-							<?php if (!isset($_SESSION['name'])) { ?>
-								<li><a href="<?= ROOT ?>/login/">Login</a></li>
-							<?php } else { ?>
-								<li><a href="<?= ROOT ?>/account/">Account</a></li>
-							<?php } ?>
-						</ul>
 					</div>
 				</div>
 			</header>
 
 			<div class="content">
 				<div class="container">
-					<h1>Hello!</h1>

@@ -30,7 +30,7 @@
 	 }
 	
 	
-	require "../views/login.view.php";
+
 //
 	unset($_SESSION['msg']);
 	unset($_SESSION['msglvl']);

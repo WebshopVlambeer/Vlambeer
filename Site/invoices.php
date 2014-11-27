@@ -11,5 +11,6 @@
 	$result = $db->query("SELECT * FROM tbl_invoices");
 	
 	require_once "views/invoices.view.php";
+	require_once "controllers/invoicesController.php";
 	require_once "inc/footer.php";
 ?>

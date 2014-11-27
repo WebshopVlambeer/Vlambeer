@@ -1,8 +1,8 @@
 <?php
 	session_start();
+	$title = "Home";
 	
 	// if($_SESSION['role_id'] == 2) {
-	// 	$title = "Home";
 	// 	echo "Welkom user";
 	// } else {
 	// 	header("location:".ROOT."/controllers/loginController.php");

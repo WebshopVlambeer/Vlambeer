@@ -8,15 +8,15 @@
 		if (isset($_SESSION['msg']) && isset($_SESSION['lvl'])) {
 			switch ($_SESSION['lvl']) {
 				case 1:
-					return "<div class=\"msg msg-success\"><div class=\"container\"".$_SESSION['msg']."</div></div>";
+					return "<div class=\"msg msg-success left\">".$_SESSION['msg']."<span class=\"msg-close right\">x</span></div>";
 					break;
 
 				case 2:
-					return "<div class=\"msg msg-warn\"><div class=\"container\"".$_SESSION['msg']."</div></div>";
+					return "<div class=\"msg msg-warn left\">".$_SESSION['msg']."<span class=\"msg-close right\">x</span></div>";
 					break;
 
 				case 3:
-					return "<div class=\"msg msg-error\"><div class=\"container\"".$_SESSION['msg']."</div></div>";
+					return "<div class=\"msg msg-error left\">".$_SESSION['msg']."<span class=\"msg-close right\">x</span></div>";
 					break;
 				
 				default:

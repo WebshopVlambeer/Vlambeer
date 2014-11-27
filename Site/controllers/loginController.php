@@ -5,8 +5,11 @@
 	require_once "../libs/Database.php";
 	require_once "../libs/User.php";
 	
-	if (isset($_POST['loginSubmit']) && filter_var($_POST['loginName'], FILTER_VALiDATE_EMAIL)&& !empty($_POST['loginPass']))  {
-
+	if (isset($_POST['loginSubmit']) && filter_var($_POST['loginName'], FILTER_VALIDATE_EMAIL)&& empty($_POST['loginPass']))  {
+echo'je hebt succesvol ingelogd';}
+else{
+	echo 'je hebt verkeerd ingelogd'
+}
 		$bind = ['user' => $_POST['loginName']];
 		$query = $db->query("SELECT * FROM tbl_customers WHERE email = :user", $bind);
 		
@@ -22,6 +25,7 @@
 		}
 	
 	}
+	require "../views/login.view.php";
 //
 	unset($_SESSION['msg']);
 	unset($_SESSION['msglvl']);

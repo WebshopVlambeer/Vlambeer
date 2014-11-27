@@ -3,6 +3,7 @@ RewriteEngine On
 
 	# Admin page
 	RewriteRule ^admin/([a-z0-9\-]+)/$ admin.php?action=$1 [NC,L]
+	RewriteRule ^admin/([a-z0-9\-]+)/([a-z0-9\-]+)/$ admin.php?action=$1&cid=$2 [NC,L]
 
 # Rewriting all URLs to remove all .php's and add trailing slashes
 	

@@ -3,7 +3,7 @@
 	
 	if($_SESSION['role_id'] == 2) {
 		$title = "Home";
-		echo 'Welkom user'
+		echo "Welkom user";
 	} else {
 		header("location: controllers/loginController.php");
 	}

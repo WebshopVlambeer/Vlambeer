@@ -30,7 +30,7 @@
 				<div class="header-top">
 					<div class="container">
 						<div class="header-top-company">
-							<img src="<?= ASSETS ?>/img/logo.png" alt="Vlambeer Logo" class="header-top-logo">
+							<img src="<?= ASSETS ?>/img/vlambeer-logo.png" alt="Vlambeer Logo" class="header-top-logo">
 							<h1 class="header-top-name">VLAMBEER</h1>
 							<h2 class="header-top-desc">Bringing back arcade games since 1955.</h2>
 						</div>

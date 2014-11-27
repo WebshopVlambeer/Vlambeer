@@ -1,40 +1,45 @@
 <?php
-  if (isset($_POST['companyname'])
-      && isset($_POST['residence'])
-      && isset($_POST['firstname'])
-      && isset($_POST['lastname'])
-      && isset($_POST['zipcode'])
-      && isset($_POST['telephone'])
-      && isset($_POST['email'])
-      && isset($_POST['password'])
-      && isset($_POST['house_number'])
-      && isset($_POST['street'])) {
-  $companyname = $_POST['companyname'];
-  $residence = $_POST['residence'];
-  $firstname = $_POST['firstname'];
-  $lastname = $_POST['lastname'];
-  $zipcode = $_POST['zipcode'];
-  $telephone = $_POST['telephone'];
-  $email = $_POST['email'];
-  $password = $_POST['password'];
-  $house_number = $_POST['house_number'];
-  $street = $_POST['street'];
-  $insertion = $_POST['insertion'];
+  require "../app/config.php";
+  require "../app/functions.php";
+  require "../app/Database.php";
+  require "../app/User.php";
+    if (isset($_POST['regCompanyname'])
+      && isset($_POST['regResidence'])
+      && isset($_POST['regFirstname'])
+      && isset($_POST['regLastname'])
+      && isset($_POST['regZipcode'])
+      && isset($_POST['regTelephone'])
+      && isset($_POST['regEmail'])
+      && isset($_POST['regPassword'])
+      && isset($_POST['regHouse_number'])
+      && isset($_POST['regStreet'])) 
+    {
+    $companyname =    $_POST['regCompanyname'];
+    $residence =      $_POST['regResidence'];
+    $firstname =      $_POST['regFirstname'];
+    $lastname =       $_POST['regLastname'];
+    $zipcode =        $_POST['regZipcode'];
+    $telephone =      $_POST['regTelephone'];
+    $email =          $_POST['regEmail'];
+    $password =       $_POST['regPassword'];
+    $house_number =   $_POST['regHouse_number'];
+    $street =         $_POST['regStreet'];
+    $insertion =      $_POST['regInsertion'];
 
   $bind = [
-    "companyname" => $companyname,
-    "residence" => $residence,
-    "firstname" => $firstname,
-    "lastname" => $lastname,
-    "zipcode" => $zipcode,
-    "telephone" => $telephone,
-    "email" => $email,
-    "password" => password_hash($password, PASSWORD_DEFAULT),
-    "house_number" => $house_number,
-    "street" => $street,
-    "insertion" => $insertion
+    "regCompanyname"  => $companyname,
+    "regResidence"    => $residence,
+    "regFirstname"    => $firstname,
+    "regLastname"     => $lastname,
+    "regZipcode"      => $zipcode,
+    "regTelephone"    => $telephone,
+    "regEmail"        => $email,
+    "regPassword"     => password_hash($password, PASSWORD_DEFAULT),
+    "regHouse_number" => $house_number,
+    "regStreet"       => $street,
+    "regInsertion"    => $insertion
   ];
-  $db->insert("INSERT INTO users (
+    $db->query("INSERT INTO users (
     companyname,
     residence,
     firstname,
@@ -47,17 +52,20 @@
     street,
     insertion)
   VALUES (
-    :companyname,
-    :residence,
-    :firstname,
-    :lastname,
-    :zipcode,
-    :telephone,
-    :email,
-    :password,
-    :house_number,
-    :street,
-    :insertion)", $bind);
+    :regCompanyname,
+    :regResidence,
+    :regFirstname,
+    :regLastname,
+    :regZipcode,
+    :regTelephone,
+    :regEmail,
+    :regPassword,
+    :regHouse_number,
+    :regStreet,
+    :regInsertion)", $bind);
+
+    header ("location:".ROOT);
 }
+require "../views/login.view.php";
 
 ?>

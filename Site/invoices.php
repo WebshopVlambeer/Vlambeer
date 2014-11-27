@@ -1,17 +1,15 @@
 <?php
 	session_start();
-	$title = "Login";
+	$title = "Home";
 	require_once "app/config.php";
 	require_once "app/functions.php";
 	require_once "libs/Database.php";
 	require_once "libs/User.php";
 	require_once "inc/header.php";
-	# Handling invalid pagevisits.         
 
 
-
-	# Logic for shop.php
+	$result = $db->query("SELECT * FROM tbl_invoices");
 	
-	require_once "views/login.view.php";
+	require_once "views/invoices.view.php";
 	require_once "inc/footer.php";
 ?>

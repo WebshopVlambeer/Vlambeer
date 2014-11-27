@@ -6,48 +6,12 @@
 
 	# Handling invalid pagevisits.
 
-      $sql = "SELECT * FROM tbl_customers";
-        if (! $query = $db->($sql)){
-            echo "Kan gegevens niet uit database halen";
-        }
-        if (DB::num_rows($query) > 0){
-            while ($row = DB::fetch($query)){
-                echo "<tr>";
-                echo "<td>" . $row->klant_nr . "</td>";
-                echo "<td>" . $row->bedrijfs_naam . "</td>";
-                echo "<td>" . $row->voorletters . "</td>";
-                echo "<td>" . $row->voornaam . "</td>";
-                echo "<td>" . $row->achternaam . "</td>";
-                echo '<td><a href="project.php?id='.$row->klant_nr.'"><div class="btn btn-primary">View Project</div></a></td>';
-                echo '<td><a href="klant.php?id='.$row->klant_nr.'"><div class="btn btn-primary">Customer Data</div></a></td>';
-                echo "</tr>";
-            }
-        }
+    $custQuery = $db->query("SELECT * FROM tbl_customers");
 
-
-   
-     
-   
-
+/*
 	//gebruiker toevoegen//
-	$sql = "SELECT * FROM tbl_customers ";
-        if (! $query = DB::query($sql)){
-            echo "Kan gegevens niet uit database halen";
-        }
-        if (DB::num_rows($query) > 0 ){
-            while ($row = DB::fetch($query)){
-                echo "<tr>";
-                echo "<td>" . $row->email . "</td>";
-                echo "<td>" . $row->password . "</td>";
-				echo "<td>" . $row->role . "</td>";
-            //    echo "<td><a href='edit.php?id=". $row->projectnr_id . "'> Bewerk </a></td>";
-                echo "<td><a href='delete.php?id=" . $row->customer_id . "'> X </a></td>";
-                echo "</tr>";
-            }
-        }
 
-
-     //gebruiker deleten//
+/*     //gebruiker deleten//
 
      	if (! isset($_GET['customer_id'])){
     		header ('location: admim.view.php');
@@ -60,7 +24,7 @@
     		}else{
        		header('location: index.php');
     }
-}
+}*/
 
 	# Logic for shop.php
 	

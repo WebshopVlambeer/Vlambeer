@@ -8,3 +8,8 @@
 		</div> <!-- /.wrapper -->
 	</body>
 </html>
+
+<?php
+	unset($_SESSION['msg']);
+	unset($_SESSION['lvl']);
+?>

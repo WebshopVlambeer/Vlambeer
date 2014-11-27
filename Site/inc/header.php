@@ -28,17 +28,11 @@
 	<body>
 		<div class="wrapper">
 			<header>
-				<div class="msg-container">
-					<?php
-						if (getMsg()) {
-						 	echo getMsg();
-						}
-					?>
-					<div class="msg msg-warn left container">
-						<p>EEN MESSAGE</p>
-						<a class="msg-close right">x</a>
-					</div>
-				</div>
+				<?php 
+					if(getMsg()) {
+						echo getMsg();
+					} 
+				?>
 				<div class="header-top">
 					<div class="container">
 						<div class="header-top-company">

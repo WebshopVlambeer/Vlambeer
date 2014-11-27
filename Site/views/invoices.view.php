@@ -9,3 +9,15 @@
 					<th>Btw</th>
 				</tr>
 			</thead>
+
+ <?php
+
+        foreach($custQuery as $invoic){
+
+        echo "<tr>";
+            echo "<td>" . $invoic->companyname . "</td>";
+            echo "<td>" . $invoic->residence . "</td>";
+            echo "<td>" . $invoic->firstname . "</td>";
+            echo "<td>" . $invoic->lastname . "</td>";
+            echo "<td>" . $invoic->zip_code . "</td>";
+            echo '<td><a hr

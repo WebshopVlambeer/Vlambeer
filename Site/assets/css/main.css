@@ -52,6 +52,8 @@ a:hover {
 .msg-container {
 	background-color:#999;
 	border-bottom:2px dotted white;
+	min-height:20px;
+	overflow:hidden;
 }
 
 .msg p {
@@ -173,6 +175,7 @@ a:hover {
 
 .nav-list-dropdown li a {
 	color:black;
+	text-align:left;
 }
 
 .nav-list-dropdown li a:hover {

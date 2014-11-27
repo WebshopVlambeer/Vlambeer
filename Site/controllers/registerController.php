@@ -1,8 +1,10 @@
 <?php
   require "../app/config.php";
   require "../app/functions.php";
-  require "../app/Database.php";
-  require "../app/User.php";
+  require "../libs/Database.php";
+  require "../libs/User.php";
+  $db = new Database(HOST, DB_NAME, USER, PASS);
+
     if (isset($_POST['regCompanyname'])
       && isset($_POST['regResidence'])
       && isset($_POST['regFirstname'])
@@ -39,7 +41,7 @@
     "regStreet"       => $street,
     "regInsertion"    => $insertion
   ];
-    $db->query("INSERT INTO users (
+    $insertQuery = $db->query("INSERT INTO tbl_customers (
     companyname,
     residence,
     firstname,
@@ -64,8 +66,15 @@
     :regStreet,
     :regInsertion)", $bind);
 
-    header ("location:".ROOT);
+    if ($insertQuery) {
+      setMsg("Successfully registered as "$bind['regFirstname'].$bind['regLastname']."!", 1);
+      header("location:".ROOT."/login/");
+      die();
+    } else {
+      setMsg("Oops! Something went wrong while trying to register!", 3);
+      header("location:".ROOT."/register/");
+      die();
+    }
 }
-require "../views/login.view.php";
 
 ?>

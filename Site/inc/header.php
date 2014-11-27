@@ -34,6 +34,10 @@
 						 	echo getMsg();
 						}
 					?>
+					<div class="msg msg-warn left container">
+						<p>EEN MESSAGE</p>
+						<a class="msg-close right">x</a>
+					</div>
 				</div>
 				<div class="header-top">
 					<div class="container">

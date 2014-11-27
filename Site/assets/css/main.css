@@ -26,6 +26,7 @@ a {
 
 a:hover {
 	color:#999;
+	cursor:pointer;
 }
 
 .container {
@@ -46,6 +47,15 @@ a:hover {
 	background-color:#fce6ad;
 	min-height:800px;
 	z-index:1;
+}
+
+.msg-container {
+	background-color:#999;
+	border-bottom:2px dotted white;
+}
+
+.msg p {
+	float:left;
 }
 
 .header-top {

@@ -1,4 +1,5 @@
 <?php
+
 if(!isset($_GET['action'])){
 ?>
 <table class="table table-striped">
@@ -145,3 +146,4 @@ if(!isset($_GET['action'])){
 } else{
     echo "Deze pagina bestaat niet.";
 }
+

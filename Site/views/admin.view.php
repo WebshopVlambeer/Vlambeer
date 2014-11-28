@@ -1,5 +1,5 @@
 <?php
-
+// De main pagina van admin
 if(!isset($_GET['action'])){
 ?>
 <table class="table table-striped">
@@ -38,7 +38,8 @@ if(!isset($_GET['action'])){
             echo '<td><a href="' . ROOT . '/admin/delete/'.$cust->customer_id.'/"><div class="btn btn-primary">Delete</div></a></td>';
         echo "</tr>";
         }
-} elseif(isset($_GET['action']) && $_GET['action'] == 'edit' && isset($_GET['cid'])){    
+} // De edit pagina van admin
+elseif(isset($_GET['action']) && $_GET['action'] == 'edit' && isset($_GET['cid'])){    
     ?>
     <form action="<?=  ROOT . '/admin/edit/' . $_GET['cid'] . '/'?>" method="post">
         <h2>Edit customer</h2>
@@ -86,7 +87,8 @@ if(!isset($_GET['action'])){
     </form>
 
     <?php
-} elseif(isset($_GET['action']) && $_GET['action'] == 'add'){
+}  // De add pagina van admin
+elseif(isset($_GET['action']) && $_GET['action'] == 'add'){
     ?>
     <form action="<?=  ROOT . '/admin/add/'?>" method="post">
         <h2>Add customer</h2>
@@ -137,7 +139,8 @@ if(!isset($_GET['action'])){
         <input type="submit" name="addCustSubmit" value="Submit"/>
     </form>
     <?php
-} else{
+} // Als de pagina niet bestaat
+else {
     echo "Deze pagina bestaat niet.";
 }
 

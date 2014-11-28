@@ -6,7 +6,7 @@
 
 	# Handling invalid pagevisits.ss
 if(!isset($_GET['action'])){
-    $custQuery = $db->query("SELECT * FROM tbl_customers");
+    $custQuery = $db->query("SELECT * FROM tbl_customers WHERE status = 1");
 } elseif(isset($_GET['action']) && $_GET['action'] == 'edit' && isset($_GET['cid'])){
     $bind = ["cid" => $_GET['cid']];
     $custQuery = $db->query("SELECT * FROM tbl_customers WHERE customer_id = :cid ", $bind);
@@ -62,8 +62,8 @@ if(!isset($_GET['action'])){
 } elseif(isset($_GET['action']) && $_GET['action'] == 'delete' && isset($_GET['cid'])){
     $bind = ["cid" => $_GET['cid']];
     $select = $db->query("SELECT * FROM tbl_customers WHERE customer_id = :cid ", $bind);
-    if($db->query("DELETE FROM tbl_customers WHERE customer_id = :cid ", $bind)){
         setMsg("You have succesfully deleted customer " . $select[0]->companyname, 1);
+    if($db->query("UPDATE tbl_customers SET status = 0 WHERE customer_id = :cid ", $bind)){
         header('location:' . ROOT .  '/admin/');
         die();
     }

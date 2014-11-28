@@ -234,7 +234,6 @@ a:hover {
 	background-color:black;
 	height:40px;
 	overflow:visible;
-	padding-top:20px;
 }
 
 .footer-top .container h2 {
@@ -266,5 +265,5 @@ a:hover {
 }
 
 .footer-section {
-	width:300px;
+	width:260px;
 }

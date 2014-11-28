@@ -75,7 +75,7 @@
 
 						<ul class="right nav-list nav-search">
 							<li>
-								<form action="<?= ROOT ?>/controllers/searchController.php">
+								<form action="<?= ROOT ?>/controllers/searchController.php" method="post">
 									<input type="text" placeholder="Search..." name="query" autocomplete="off">
 									<input type="submit" hidden>
 								</form>

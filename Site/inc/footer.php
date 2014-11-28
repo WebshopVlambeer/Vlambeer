@@ -5,7 +5,7 @@
 				<div class="footer-top">
 					<div class="container">
 						<h2>Subscribe to our newsletter:</h2>
-						<form action="<?= ROOT ?>/controllers/newsletterController.php">
+						<form action="<?= ROOT ?>/controllers/newsletterController.php" method="post">
 							<input type="email" placeholder="Email address" name="newsletterEmail" autocomplete="on">
 							<input type="submit" hidden>
 						</form>
@@ -16,7 +16,8 @@
 					<div class="container">
 						<div class="footer-section">
 							<h2>About:</h2>
-							<p>VLAMBEER is a Dutch independent game studio made up of Rami Ismail and Jan Willem Nijman, bringing back arcade games since 1955.</p>
+							<p>VLAMBEER is a Dutch independent game studio made up of Rami Ismail 
+								and Jan Willem Nijman, bringing back arcade games since 1955.</p>
 						</div>
 					</div>
 				</div>

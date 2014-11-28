@@ -12,7 +12,7 @@
 	padding:0;
 	margin:0;
 	font-family:"Gotham", sans-serif;
-	z-index:1 !important;
+	z-index:1;
 }
 
 body {
@@ -84,6 +84,7 @@ a:hover {
 	font-size:54px;
 	margin-top:30px;
 	letter-spacing:2px;
+	text-transform:uppercase;
 }
 
 .header-top-desc {
@@ -133,14 +134,26 @@ a:hover {
 		transition-duration:100ms;
 }
 
+.nav-search {
+	width:240px;
+}
+
+.nav-list li form {
+	display:block;
+	width:240%;
+	margin-right:40px;
+}
+
 .nav-list li form input[type=text] {
 	width:240px;
-	height:26px;
+	height:30px;
+	margin-top:5px;
 	-webkit-box-sizing : border-box;‌​
   -moz-box-sizing : border-box;
   box-sizing : border-box;
   border:1px inset;
   padding-left:5px;
+  margin-right:20px;
 	border-radius:4px;
 }
 
@@ -176,6 +189,8 @@ a:hover {
 .nav-list-dropdown li a {
 	color:black;
 	text-align:left;
+	padding-left:10px;
+	width:auto;
 }
 
 .nav-list-dropdown li a:hover {

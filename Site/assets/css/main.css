@@ -16,7 +16,9 @@
 }
 
 body {
+	background-color:#fce6ad;
 	z-index:1;
+
 }
 
 a {
@@ -232,6 +234,7 @@ a:hover {
 	background-color:black;
 	height:40px;
 	overflow:visible;
+	padding-top:20px;
 }
 
 .footer-top .container h2 {

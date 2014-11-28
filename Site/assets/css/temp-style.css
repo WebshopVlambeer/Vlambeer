@@ -46,3 +46,8 @@
 	margin: 0px 113px 0px 0px;
 }
 
+.productArea:last-child {
+	margin-bottom:20px;
+}
+	
+

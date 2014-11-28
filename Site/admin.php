@@ -6,7 +6,7 @@
   require_once "controllers/userEditController.php";
 	# Handling invalid pagevisits.ss
 if(!isset($_GET['action'])){
-    $custQuery = $db->query("SELECT * FROM tbl_customers WHERE status = 1");
+    $custQuery = $db->query("SELECT * FROM tbl_customers WHERE active = 1");
 } elseif(isset($_GET['action']) && $_GET['action'] == 'edit' && isset($_GET['cid'])){
     $bind = ["cid" => $_GET['cid']];
     $custQuery = $db->query("SELECT * FROM tbl_customers WHERE customer_id = :cid ", $bind);

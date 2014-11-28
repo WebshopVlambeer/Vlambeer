@@ -1,4 +1,5 @@
 <?php
+if(isset($_GET['action']) && $_GET['action'] == 'edit' && isset($_GET['cid'])){
   $bind = ["cid" => $_GET['cid']];
   $custQuery = $db->query("SELECT * FROM tbl_customers WHERE customer_id = :cid ", $bind);
 
@@ -10,7 +11,6 @@
     !empty($_POST['lastname']) && 
     !empty($_POST['zip_code']) && 
     !empty($_POST['telephone']) && 
-    !empty($_POST['password']) && 
     !empty($_POST['house_number']) && 
     !empty($_POST['street']) && 
     filter_var($_POST['email'], FILTER_VALIDATE_EMAIL))
@@ -23,13 +23,12 @@
              "lst" => $_POST['lastname'],
              "zip" => $_POST['zip_code'],
              "tel" => $_POST['telephone'],
-             "pass" => $_POST['password'],
              "house" => $_POST['house_number'],
              "street" => $_POST['street'],
              "email" => $_POST['email']];
 
     $editQuery = $db->query("UPDATE tbl_customers SET companyname = :compn, residence = :resid, firstname = :frst,
-      insertion = :insrt, lastname = :lst, zip_code = :zip, telephone = :tel, password = :pass, house_number = :house,
+      insertion = :insrt, lastname = :lst, zip_code = :zip, telephone = :tel, house_number = :house,
       street = :street, email = :email WHERE customer_id = :cid", $bind);
 
     if($editQuery){
@@ -38,6 +37,7 @@
       die();
     }
   }
+}
 
-  $user->edit("uid", $values);
+ /* $user->edit("uid", $values);*/
 ?>

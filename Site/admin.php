@@ -3,7 +3,7 @@
 	$title = "Admin Panel";
 // UNDO KNOP BIJ MESSAGE EN GEEN DELETE
 	require_once "inc/header.php";
-
+  require_once "controllers/userEditController.php";
 	# Handling invalid pagevisits.ss
 if(!isset($_GET['action'])){
     $custQuery = $db->query("SELECT * FROM tbl_customers WHERE status = 1");

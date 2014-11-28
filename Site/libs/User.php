@@ -9,24 +9,24 @@
 		}
 
 		public function registerUser($arr) {
-			// Add product to shopping cart
+			// Add an user
 		}
 
 		public function deactivateUser($prod) {
-			// Remove a product from the shopping cart
+			// Remove an user
 		}
 
 		public function editCart($prod, $amount) {
-			// Edit the amount of products in the cart
+			// Edit an user
 		}
 
 		// Getters & setters:
-		public function getCart() {
-			// Return an array of products in the cart
+		public function getUser() {
+			// Return an array of users
 		}
 
-		public function setCart() {
-			// Save the cart to the database
+		public function setUser() {
+			// Save user to the database
 		}
 	}
 ?>

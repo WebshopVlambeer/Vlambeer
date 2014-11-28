@@ -43,6 +43,9 @@
 
 						<div class="header-top-cart">
 							<img src="<?= ASSETS ?>/img/cart.png" alt="Shopping Cart" class="header-top-cart">
+							<h2>Shopping cart:</h2>
+							<p>&euro;8,95</p>
+							<p>3 Products</p>
 						</div>
 					</div>
 				</div>
@@ -68,10 +71,10 @@
 							<?php } ?>
 						</ul>
 
-						<ul class="right nav-list">
+						<ul class="right nav-list nav-search">
 							<li>
 								<form action="<?= ROOT ?>/controllers/searchController.php">
-									<input type="text" placeholder="Search..." name="query">
+									<input type="text" placeholder="Search..." name="query" autocomplete="off">
 									<input type="submit" hidden>
 								</form>
 							</li>

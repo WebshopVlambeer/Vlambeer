@@ -1,5 +1,5 @@
 <?php
-
+// De main pagina van admin
 if(!isset($_GET['action'])){
 ?>
 <table class="table table-striped">
@@ -13,7 +13,6 @@ if(!isset($_GET['action'])){
             <th>Zip code</th>
             <th>Telephone</th>
             <th>Email</th>
-            <th>Password</th>
             <th>House number</th>
             <th>Street</th>
             <th>Edit</th>
@@ -33,14 +32,14 @@ if(!isset($_GET['action'])){
             echo "<td>" . $cust->zip_code . "</td>";
             echo "<td>" . $cust->telephone . "</td>";
             echo "<td>" . $cust->email . "</td>";
-            echo "<td>" . $cust->password . "</td>";
             echo "<td>" . $cust->house_number . "</td>";
             echo "<td>" . $cust->street . "</td>";
             echo '<td><a href="' . ROOT . '/admin/edit/'.$cust->customer_id.'/"><div class="btn btn-primary">Edit</div></a></td>';
             echo '<td><a href="' . ROOT . '/admin/delete/'.$cust->customer_id.'/"><div class="btn btn-primary">Delete</div></a></td>';
         echo "</tr>";
         }
-} elseif(isset($_GET['action']) && $_GET['action'] == 'edit' && isset($_GET['cid'])){
+} // De edit pagina van admin
+elseif(isset($_GET['action']) && $_GET['action'] == 'edit' && isset($_GET['cid'])){    
     ?>
     <form action="<?=  ROOT . '/admin/edit/' . $_GET['cid'] . '/'?>" method="post">
         <h2>Edit customer</h2>
@@ -77,10 +76,6 @@ if(!isset($_GET['action'])){
             <input type="email" name="email" id="email" value="<?= $custQuery[0]->email ?>" required/>
         </div>
         <div>
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password" value="<?= $custQuery[0]->password ?>" required/>
-        </div>
-        <div>
             <label for="house_number">House number</label>
             <input type="text" name="house_number" id="house_number" value="<?= $custQuery[0]->house_number ?>" required/>
         </div>
@@ -92,7 +87,8 @@ if(!isset($_GET['action'])){
     </form>
 
     <?php
-} elseif(isset($_GET['action']) && $_GET['action'] == 'add'){
+}  // De add pagina van admin
+elseif(isset($_GET['action']) && $_GET['action'] == 'add'){
     ?>
     <form action="<?=  ROOT . '/admin/add/'?>" method="post">
         <h2>Add customer</h2>
@@ -143,7 +139,8 @@ if(!isset($_GET['action'])){
         <input type="submit" name="addCustSubmit" value="Submit"/>
     </form>
     <?php
-} else{
+} // Als de pagina niet bestaat
+else {
     echo "Deze pagina bestaat niet.";
 }
 

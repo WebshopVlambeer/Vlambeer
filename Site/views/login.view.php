@@ -1,4 +1,4 @@
-<form method="post" action="<?= ROOT . '/shop/' ?>"  role="form" class="login-form col-md-4 col-md-offset-4">
+<form method="post" action="<?= ROOT . '/controllers/loginController.php' ?>"  role="form" class="login-form col-md-4 col-md-offset-4">
 	<fieldset>
 		<legend><h2>Login</h2></legend>
 

@@ -13,7 +13,6 @@ if(!isset($_GET['action'])){
             <th>Zip code</th>
             <th>Telephone</th>
             <th>Email</th>
-            <th>Password</th>
             <th>House number</th>
             <th>Street</th>
             <th>Edit</th>
@@ -33,14 +32,13 @@ if(!isset($_GET['action'])){
             echo "<td>" . $cust->zip_code . "</td>";
             echo "<td>" . $cust->telephone . "</td>";
             echo "<td>" . $cust->email . "</td>";
-            echo "<td>" . $cust->password . "</td>";
             echo "<td>" . $cust->house_number . "</td>";
             echo "<td>" . $cust->street . "</td>";
             echo '<td><a href="' . ROOT . '/admin/edit/'.$cust->customer_id.'/"><div class="btn btn-primary">Edit</div></a></td>';
             echo '<td><a href="' . ROOT . '/admin/delete/'.$cust->customer_id.'/"><div class="btn btn-primary">Delete</div></a></td>';
         echo "</tr>";
         }
-} elseif(isset($_GET['action']) && $_GET['action'] == 'edit' && isset($_GET['cid'])){
+} elseif(isset($_GET['action']) && $_GET['action'] == 'edit' && isset($_GET['cid'])){    
     ?>
     <form action="<?=  ROOT . '/admin/edit/' . $_GET['cid'] . '/'?>" method="post">
         <h2>Edit customer</h2>
@@ -75,10 +73,6 @@ if(!isset($_GET['action'])){
         <div>
             <label for="email">Email</label>
             <input type="email" name="email" id="email" value="<?= $custQuery[0]->email ?>" required/>
-        </div>
-        <div>
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password" value="<?= $custQuery[0]->password ?>" required/>
         </div>
         <div>
             <label for="house_number">House number</label>

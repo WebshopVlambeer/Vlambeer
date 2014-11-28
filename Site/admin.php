@@ -39,6 +39,7 @@ if(!isset($_GET['action'])){
     if(isset($_POST['addCustSubmit']) && !empty($_POST['companyname']) && !empty($_POST['residence']) && !empty($_POST['firstname'])
         && !empty($_POST['insertion']) && !empty($_POST['lastname']) && !empty($_POST['zip_code']) && !empty($_POST['telephone'])
         && !empty($_POST['password']) && !empty($_POST['house_number']) && !empty($_POST['street']) && filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
+        $hpass = password_hash($_POST['password'], PASSWORD_DEFAULT);
         $bind = ["compn" => $_POST['companyname'],
             "resid" => $_POST['residence'],
             "frst" => $_POST['firstname'],
@@ -46,7 +47,7 @@ if(!isset($_GET['action'])){
             "lst" => $_POST['lastname'],
             "zip" => $_POST['zip_code'],
             "tel" => $_POST['telephone'],
-            "pass" => $_POST['password'],
+            "pass" => $hpass,
             "house" => $_POST['house_number'],
             "street" => $_POST['street'],
             "email" => $_POST['email']];

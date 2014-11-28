@@ -23,5 +23,7 @@
             echo "<td>" . $invoic->price . "</td>";
             echo "<td>" . $invoic->totalPrice . "</td>";
             echo "<td>" . $invoic->btw . "</td>";
+            echo '<td><a href="' . ROOT . '../index.php/'.$invoic->customer_id.'/"><div class="btn btn-primary">Edit</div></a></td>';
+
         echo "</tr>";
     }

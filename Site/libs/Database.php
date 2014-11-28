@@ -69,5 +69,10 @@
 				return true;
 			}
 		} // end method "query".
+		public function getRows(){
+			if($this->stmt->rowCount()){
+				return true;
+			}
+		}
 	} // end class.
 ?>

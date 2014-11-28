@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	$title = "Admin Panel";
-// UNDO KNOP BIJ MESSAGE EN GEEN DELETE 
+// UNDO KNOP BIJ MESSAGE EN GEEN DELETE
 	require_once "inc/header.php";
 
 	# Handling invalid pagevisits.ss
@@ -33,7 +33,7 @@ if(!isset($_GET['action'])){
             header('location:' . ROOT .  '/admin/');
            die();
     }
-    }
+    }//gebruiker toevoegen//
 } elseif(isset($_GET['action']) && $_GET['action'] == 'add'){
 
     if(isset($_POST['addCustSubmit']) && !empty($_POST['companyname']) && !empty($_POST['residence']) && !empty($_POST['firstname'])
@@ -57,7 +57,7 @@ if(!isset($_GET['action'])){
             header('location:' . ROOT .  '/admin/');
             die();
         }
-    }
+    }//gebruiker deleten//
 } elseif(isset($_GET['action']) && $_GET['action'] == 'delete' && isset($_GET['cid'])){
     $bind = ["cid" => $_GET['cid']];
     $select = $db->query("SELECT * FROM tbl_customers WHERE customer_id = :cid ", $bind);
@@ -69,25 +69,6 @@ if(!isset($_GET['action'])){
 } else{
     echo "Deze pagina bestaat niet.";
 }
-
-/*
-	//gebruiker toevoegen//
-
-/*     //gebruiker deleten//
-
-     	if (! isset($_GET['customer_id'])){
-    		header ('location: admim.view.php');
-		}else{
-   			$id = intval($_GET['customer_id']);
-    		$sql = "DELETE FROM  WHERE customer_id = '$customer_id'";
-
-    		if(! $query = DB::query($sql)){
-        	echo 'Fout bij verwijderen van item';
-    		}else{
-       		header('location: index.php');
-    }
-}*/
-
 	# Logic for shop.php
 	
 	require_once "views/admin.view.php";

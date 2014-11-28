@@ -2,13 +2,12 @@
 	session_start();
 	$title = "Whoopsie!";
 
-	require_once "inc/header.php";
+	require "inc/header.php";
 
 	# Handling invalid pagevisits.
+	$url = $_SERVER['REQUEST_URI'];
 
-	echo "oops!";
-	# Logic for error.php
-	
-	require_once "views/error.view.php";
-	require_once "inc/footer.php";
+	echo "<h1>Oops! Looks like the page ".$url." doesn't exist!</h1>";
+
+	require "inc/footer.php";
 ?>

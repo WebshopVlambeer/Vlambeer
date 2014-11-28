@@ -20,12 +20,16 @@
 				$_SESSION['role'] = $query[0]->userrole;
 				header("location:".ROOT . "/shop/");
 			} else {
-				echo 'je bent verkeerd ingelogd';
+				setMsg('Je bent verkeerd ingelogd', 2);
+				header("location:".ROOT . "/login/");
+				die();
 			}
-		} else {
-	echo 'je bent verkeerd ingelogdsdsdsd';
+			} else {
+				setMsg('Je bent verkeerd ingelogd', 2);
+				header("location:".ROOT . "/login/");
+				die();
 			}
-	 }
+	 	}
 	
 	
 	

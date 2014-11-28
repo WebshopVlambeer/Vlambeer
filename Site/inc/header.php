@@ -42,10 +42,12 @@
 						</div>
 
 						<div class="header-top-cart">
-							<img src="<?= ASSETS ?>/img/cart.png" alt="Shopping Cart" class="header-top-cart">
-							<h2>Shopping cart:</h2>
-							<p>&euro;8,95</p>
-							<p>3 Products</p>
+							<div class="right">
+								<a href="<?= ROOT ?>/cart/">Shopping cart:</a>
+								<p>&euro;8,95</p>
+								<p>3 Products</p>
+							</div>
+							<img src="<?= ASSETS ?>/img/cart.png" alt="Shopping Cart" class="right">
 						</div>
 					</div>
 				</div>

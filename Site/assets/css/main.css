@@ -94,6 +94,23 @@ a:hover {
 	margin-top:-10px;
 }
 
+.header-top-cart {
+	display:block;
+	padding-top:40px;
+}
+
+.header-top-cart .right a {
+	border-bottom:1px dotted #000;
+	margin-top:2px;
+	font-size:24px;
+	margin-bottom:4px;
+	display:inline-block;
+}
+
+.header-top-cart img {
+	margin-right:20px;
+}
+
 .header-bottom {
 	background-color:black;
 	height:40px;
@@ -135,17 +152,17 @@ a:hover {
 }
 
 .nav-search {
-	width:240px;
+	width:300px;
 }
 
 .nav-list li form {
 	display:block;
-	width:240%;
+	width:300px;
 	margin-right:40px;
 }
 
 .nav-list li form input[type=text] {
-	width:240px;
+	width:300px;
 	height:30px;
 	margin-top:5px;
 	-webkit-box-sizing : border-box;‌​

@@ -12,7 +12,7 @@ $(document).ready(function() {
 	    dataType: 'JSONP',
 	    success: function (data) {
 	    	console.log(data.results[0].name);
-	        $("h1").html(data.results[0].name);
+	        $(".name").html(data.results[0].name);
 	  }
 
 	});

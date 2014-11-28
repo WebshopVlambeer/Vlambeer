@@ -5,10 +5,9 @@
 	require "inc/header.php";
 
 	# Handling invalid pagevisits.
+	$url = $_SERVER['REQUEST_URI'];
 
-	echo "oops!";
-	# Logic for error.php
-	
-	require "views/error.view.php";
+	echo "<h1>Oops! Looks like the page ".$url." doesn't exist!</h1>";
+
 	require "inc/footer.php";
 ?>

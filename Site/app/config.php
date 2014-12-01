@@ -6,6 +6,6 @@
 	define("PASS", "");																								# Password to connect to database.
 
 	# PATH CONTSTANTS
-	define("ROOT", "http://localhost/git/Vlambeer/site");							# Root of site.
+	define("ROOT", "http://localhost/Vlambeer/site");							# Root of site.
 	define("ASSETS", ROOT."/assets");																	# Assets of site.
 ?>

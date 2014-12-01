@@ -38,6 +38,4 @@ if(isset($_GET['action']) && $_GET['action'] == 'edit' && isset($_GET['cid'])){
     }
   }
 }
-
- /* $user->edit("uid", $values);*/
 ?>

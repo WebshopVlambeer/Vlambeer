@@ -1,0 +1,269 @@
+@font-face {
+  font-family:"Gotham";
+  src:url("../fonts/Gotham-Book.otf") format("opentype");
+}
+
+@font-face {
+	font-family:"Gotham Bold";
+	src:url("../fonts/Gotham-Bold.otf") format("opentype");
+}
+
+* {
+	padding:0;
+	margin:0;
+	font-family:"Gotham", sans-serif;
+	z-index:1;
+}
+
+body {
+	background-color:#fce6ad;
+	z-index:1;
+
+}
+
+a {
+	color:white;
+	text-decoration:none;
+	/*Transitions*/
+		-webkit-transition: all ease-in-out;
+		-moz-transition: all ease-in-out;
+		-o-transition: all ease-in-out;
+		-ms-transition: all ease-in-out;
+		transition: all ease-in-out;
+		transition-duration:100ms;
+}
+
+a:hover {
+	color:#999;
+	cursor:pointer;
+}
+
+.container {
+	width:1080px;
+	margin:0 auto;
+	z-index:1;
+}
+
+.left {
+	float:left;
+}
+
+.right {
+	float:right;
+}
+
+.content {
+	background-color:#fce6ad;
+	min-height:800px;
+	z-index:1;
+}
+
+.msg-container {
+	background-color:#999;
+	border-bottom:2px dotted white;
+	min-height:20px;
+	overflow:hidden;
+}
+
+.msg p {
+	float:left;
+}
+
+.header-top {
+	background-color:#fac846;
+	height:160px;
+}
+
+.header-top-company {
+	float:left;
+	width:500px;
+	margin-top:10px;
+	position:relative;
+}
+
+.header-top-logo {
+	width:140px;
+	height:140px;
+	float:left;
+}
+
+.header-top-name {
+	font-family:"Gotham Bold";
+	float:left;
+	font-size:54px;
+	margin-top:30px;
+	letter-spacing:2px;
+	text-transform:uppercase;
+}
+
+.header-top-desc {
+	font-size:16px;
+	float:left;
+	margin-left:10px;
+	margin-top:-10px;
+}
+
+.header-top-cart {
+	display:block;
+	padding-top:40px;
+}
+
+.header-top-cart .right a {
+	border-bottom:1px dotted #000;
+	margin-top:2px;
+	font-size:24px;
+	margin-bottom:4px;
+	display:inline-block;
+}
+
+.header-top-cart img {
+	margin-right:20px;
+}
+
+.header-bottom {
+	background-color:black;
+	height:40px;
+	overflow:visible;
+}
+
+.nav-list {
+	list-style:none;
+	height:40px;
+	font-size:0;
+}
+
+.nav-list li:first-of-type {
+	margin-left:20px;
+}
+
+.nav-list li {
+	font-size:16px;
+	display:inline-block;
+	height:40px;
+	position:relative;
+	width:100px;
+}
+
+.nav-list li a {
+	color:#FFF;
+	line-height:40px;
+	display:block;
+	width:100%;
+	height:100%;
+	text-align:center;
+	/*Transitions*/
+		-webkit-transition: all ease-in-out;
+		-moz-transition: all ease-in-out;
+		-o-transition: all ease-in-out;
+		-ms-transition: all ease-in-out;
+		transition: all ease-in-out;
+		transition-duration:100ms;
+}
+
+.nav-search {
+	width:300px;
+}
+
+.nav-list li form {
+	display:block;
+	width:300px;
+	margin-right:40px;
+}
+
+.nav-list li form input[type=text] {
+	width:300px;
+	height:30px;
+	margin-top:5px;
+	-webkit-box-sizing : border-box;‌​
+  -moz-box-sizing : border-box;
+  box-sizing : border-box;
+  border:1px inset;
+  padding-left:5px;
+  margin-right:20px;
+	border-radius:4px;
+}
+
+.nav-list li a:hover {
+	background-color:#484848;
+	cursor:pointer;
+}
+
+.nav-list-dropdown {
+	display:none;
+	position:absolute;
+	-webkit-box-shadow: 0 0 10px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    0 0 10px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         0 0 10px 0px rgba(50, 50, 50, 0.75);
+	border-radius: 0 0 5px 5px;
+	background-color:#FFF;
+	height:auto;
+}
+
+.nav-list-dropdown li {
+	display:list-item;
+	list-style:none;
+	border-top:1px dotted black;
+	min-width:200px;
+	width:auto;
+}
+
+.nav-list-dropdown li:first-of-type {
+	border:none;
+	margin:0;
+}
+
+.nav-list-dropdown li a {
+	color:black;
+	text-align:left;
+	padding-left:10px;
+	width:auto;
+}
+
+.nav-list-dropdown li a:hover {
+	background-color:#BABABA;
+}
+
+.nav-list li:hover .nav-list-dropdown {
+	display:block;
+	top:40px;
+	left:0;
+	z-index:1;
+}
+
+.footer-top {
+	background-color:black;
+	height:40px;
+	overflow:visible;
+}
+
+.footer-top .container h2 {
+	line-height:40px;
+	color:#FFF;
+	float:left;
+}
+
+.footer-top .container form {
+	float:left;
+	width:300px;
+}
+
+.footer-top .container form input {
+	width:300px;
+	height:30px;
+	margin-top:5px;
+	padding-left:5px;
+	margin-left:10px;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	border:1px inset;
+	border-radius:4px;
+}
+
+.footer-bottom {
+	background-color:#fac846;
+	min-height:160px;
+}
+
+.footer-section {
+	width:260px;
+}

@@ -1,0 +1,15 @@
+RewriteEngine On
+
+# Admin page
+RewriteRule ^admin/([a-z0-9\-]+)/$ admin.php?action=$1 [NC,L]
+RewriteRule ^admin/([a-z0-9\-]+)/([a-z0-9\-]+)/$ admin.php?action=$1&cid=$2 [NC,L]
+
+# Rewriting all URLs to remove all .php's and add trailing slashes
+	
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^/]+)/$ $1.php
+RewriteRule ^([^/]+)/([^/]+)/$ /$1/$2.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !(\.[a-zA-Z0-9]{1,5}|/)$
+RewriteRule (.*)$ /$1/ [R=301,L]

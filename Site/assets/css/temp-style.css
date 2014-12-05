@@ -1,4 +1,4 @@
-/* Store */
+/* STORE ------------------------------------------------------------------------------------------ */
 
 .productArea {
 	height:232px;
@@ -10,44 +10,96 @@
 	padding-top:60px;
 }
 
+.shopSlider {
+	height:504px;
+	width:100%;
+	background:red;
+}
+
 .prevBtn, .nextBtn{
 	margin: 87px 28px 87px 28px;
 }
 
 .prevBtn {
 	float:left;
+	display:inline-block;
 }
 
 .nextBtn {
 	float:right;
+	display: inline-block;
 }
 
 .products {
 	position:absolute;
-	margin: 29px 0px 30px 0px;
+	margin: 0px 0px 0px 113px;
 }
 
-.product1, .product2, .product3 {
+.product {
+	position:relative;
 	background:red;
 	width:270px;
 	height:172px;
 	display:inline-block;
-}
-
-.product1 {
-	margin: 0px 0px 0px 113px;
-}
-
-.product2 {
-	margin: 0px 22px 0px 22px;
-}
-
-.product3 {
-	margin: 0px 113px 0px 0px;
+	margin: 29.5px 18px 0px 0px;
 }
 
 .productArea:last-child {
 	margin-bottom:20px;
 }
-	
 
+/* REGISTER ------------------------------------------------------------------------------------------*/
+
+.regForm {
+	width: 1000px;
+}	
+.regFormInput > label {
+	display: inline-block;
+    float: left;
+    clear: left;
+    width: 250px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.regFormInput > input {
+	display: inline-block;
+	float:left;
+	width:300px;
+	height:30px;
+	border: 1px inset;
+	box-sizing:border-box;
+	border-radius: 4px;
+	padding-left: 5px;
+}
+
+.regFormInput {
+	padding: 5px;
+}
+
+
+
+.product-area {
+	width:100%;
+	background-color:#FAC846;
+	display:table;
+	overflow:hidden;
+	position:relative;
+}
+
+.product-item {
+	width:288px;
+	height:162px;
+	background-color:red;
+	margin:10px 16px;
+	list-style:none;
+}
+
+.product-area * {
+	float:left;
+}
+
+.inner-container {
+	width:960px;
+	margin:0 auto;
+}
